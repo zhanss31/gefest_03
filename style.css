@@ -1,0 +1,39 @@
+@keyframes MyAnimation{
+    0%{
+        transform:scale(1) rotate(0deg)
+    }
+    50%{
+        transform:scale(0.5) rotate(180deg)
+    }
+    100%{
+        transform:scale(1) rotate(360deg)
+    }
+}
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 4fr;
+    row-gap:40px;
+    column-gap: 200px;
+    height: 80vh;
+    margin: 50px 100px;
+}
+
+.box{
+    background-color:  #4FA0FF;
+    transition: 1s;
+}
+
+.box:hover{
+    animation-name: MyAnimation;
+    animation-duration: 1s;
+}
+
+#four{
+    grid-column: span 3;
+    transition: 1s;
+}
+
+#four:hover{
+    animation-name: fadeOut;
+}
